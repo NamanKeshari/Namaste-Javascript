@@ -12,20 +12,39 @@ const obj = {
 
 const flattenObj = (obj) => {
   let ans = {};
-  const generateFlattenObj = (obj, parent) => {
+
+  function flatten(obj, parent) {
     for (let key in obj) {
       let newParent = parent + key;
       let value = obj[key];
       if (typeof value === "object" && !Array.isArray(value)) {
-        generateFlattenObj(value, newParent + ".");
+        flatten(value, newParent + ".");
       } else {
         ans[newParent] = value;
       }
     }
-  };
-  generateFlattenObj(obj, "");
+  }
 
+  flatten(obj, "");
   return ans;
 };
+
+// const flattenObj = (obj) => {
+//   let ans = {};
+//   const generateFlattenObj = (obj, parent) => {
+//     for (let key in obj) {
+//       let newParent = parent + key;
+//       let value = obj[key];
+//       if (typeof value === "object" && !Array.isArray(value)) {
+//         generateFlattenObj(value, newParent + ".");
+//       } else {
+//         ans[newParent] = value;
+//       }
+//     }
+//   };
+//   generateFlattenObj(obj, "");
+
+//   return ans;
+// };
 
 console.log(flattenObj(obj));
