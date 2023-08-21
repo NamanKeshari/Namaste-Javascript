@@ -30,3 +30,18 @@ document.getElementById("throttle-btn").onclick = throttle(
   () => console.log("hi naman throttle"),
   3000
 );
+
+/**-------------------------------------------------------------------------------------------------- */
+/**
+ * Write a prototype to find the second max value in an array
+ */
+
+const arr = [5, 2, 10, 23, 102, 56];
+
+Array.prototype.secondMax = function () {
+  const arr = [...this];
+  arr.sort((a, b) => b - a);
+  return arr[1];
+};
+
+console.log(arr.secondMax(), arr);
