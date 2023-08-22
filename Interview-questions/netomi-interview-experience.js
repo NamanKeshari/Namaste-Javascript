@@ -105,25 +105,27 @@ obj2 = {x: 10, y: {z: 20}}
 // }
 
 // constructor function
-// function Dude(name){
-//   this.name = name,
-//   this.printName = function(){
-//     return this.name;
-//   }
+// function Dude(name) {
+//   (this.name = name),
+//     (this.printName = function () {
+//       return this.name;
+//     });
 // }
 
-// const me = new Dude('naman');
-// const me1 = new Dude('mayank');
-// const me2 = new Dude('qwqww');
-// const me3 = new Dude('qwqwwwqwqq');
-// console.log(me)
-// console.log(me1)
-// console.log(me2)
-// console.log(me3)
+// Dude.prototype.reverse = function () {
+//   const n = this.name;
+//   const newN = n.split("").reverse().join("");
+//   console.log(newN);
+// };
 
-// Dude.prototype.reverse = function(){
-//   console.log(this.name.reverse());
-// }
+// const me = new Dude("naman");
+// const me1 = new Dude("mayank");
+// const me2 = new Dude("qwqww");
+// const me3 = new Dude("qwqwwwqwqq");
+// me1.reverse();
+// console.log(me1);
+// console.log(me2);
+// console.log(me3);
 
 // factory function
 // function dude(name) {
