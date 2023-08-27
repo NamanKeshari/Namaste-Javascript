@@ -6,22 +6,25 @@
   <details>
   Example :-
   <summary>
-    ```HTML
-        <ul id="category">
-            <li id="laptops">Laptops</li>
-            <li id="cameras">Cameras</li>
-            <li id="shoes">Shoes</li>
-            <div id="test">testing</div>
-        </ul>
-    ```
-    ```Javascript
-        document.getElementById("category").addEventListener("click", (e) => {
-        console.log(e);
-        if (e.target.nodeName === "LI") {
-        window.location.href = "/" + e.target.id;
-        }
-        })
-    ```
+
+  ```HTML
+      <ul id="category">
+          <li id="laptops">Laptops</li>
+          <li id="cameras">Cameras</li>
+          <li id="shoes">Shoes</li>
+          <div id="test">testing</div>
+      </ul>
+  ```
+
+  ```Javascript
+      document.getElementById("category").addEventListener("click", (e) => {
+      console.log(e);
+      if (e.target.nodeName === "LI") {
+      window.location.href = "/" + e.target.id;
+      }
+      })
+  ```
+
   </summary>
   </details>
 
