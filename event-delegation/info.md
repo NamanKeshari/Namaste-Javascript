@@ -2,10 +2,8 @@
 
 - Event Delegation can only exist if event capturing/bubbling exists.
 - Its most relevant example is of that input element.
-- Example :-
-  <details>
-  Example :-
-  <summary>
+- <details>
+    <summary>Example :-</summary>
 
   ```HTML
       <ul id="category">
@@ -25,8 +23,7 @@
       })
   ```
 
-  </summary>
-  </details>
+    </details>
 
 ## Benifits
 
