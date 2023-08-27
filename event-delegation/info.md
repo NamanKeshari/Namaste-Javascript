@@ -4,7 +4,9 @@
 - Its most relevant example is of that input element.
 - <details>
     <summary>Example :-</summary>
-
+    
+    ### HTML
+    
   ```HTML
       <ul id="category">
           <li id="laptops">Laptops</li>
@@ -13,6 +15,7 @@
           <div id="test">testing</div>
       </ul>
   ```
+  ### JavaScript
 
   ```Javascript
       document.getElementById("category").addEventListener("click", (e) => {
