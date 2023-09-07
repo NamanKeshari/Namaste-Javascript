@@ -50,7 +50,6 @@
 // const calculator = {
 //   total: 0,
 //   add(val){
-
 //     this.total += val;
 //     return this;
 //   },
