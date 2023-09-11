@@ -26,27 +26,25 @@ const once = (cb) => {
 const funClosure = once(outer("how about you run it more than once?"));
 funClosure();
 
-function memoize(cb, initialParams) {
-  let val;
-
-  let count = 0;
-  let params1 = initialParams;
-  return function test(params = params1) {
-    if (params !== params1 || count === 0) {
-      console.log("there's some change");
-      val = cb(params);
-      params1 = params;
+function memoize(fn) {
+  let calls = {};
+  return function (...args) {
+    let key = JSON.stringify(args);
+    if (!calls.hasOwnProperty(key)) {
+      return (calls[key] = fn.apply(this, args));
     }
-    count++;
-    return val;
+    return calls[key];
   };
 }
 
+let count = 0;
 function hello(name) {
+  count++;
   return `hello ${name}`;
 }
 
-const output = memoize(hello, "naman");
-console.log(output());
+const output = memoize(hello);
 console.log(output("naman"));
 console.log(output("rishu"));
+console.log(output("naman"));
+console.log(count);
