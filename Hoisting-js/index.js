@@ -19,6 +19,7 @@ function f() {
   function b() {
     console.log(x);
   }
+  x = 100;
 }
 
 f();

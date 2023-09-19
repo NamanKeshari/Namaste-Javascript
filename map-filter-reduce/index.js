@@ -7,10 +7,10 @@ var users = [
 ];
 var output = users.reduce(function (acc, curr) {
     if (acc.hasOwnProperty(curr.age)) {
-        acc[curr.age] += 1;
+        acc[curr.age]++;
     }
     else {
-        acc[curr.age] = 0;
+        acc[curr.age] = 1;
     }
     return acc;
 }, {});

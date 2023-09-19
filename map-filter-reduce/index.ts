@@ -14,9 +14,9 @@ const users: userType[] = [
 
 const output: any = users.reduce((acc, curr: userType) => {
   if (acc.hasOwnProperty(curr.age)) {
-    acc[curr.age] += 1;
+    acc[curr.age]++;
   } else {
-    acc[curr.age] = 0;
+    acc[curr.age] = 1;
   }
   return acc;
 }, {});
